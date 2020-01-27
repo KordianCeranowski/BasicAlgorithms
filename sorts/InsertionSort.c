@@ -1,5 +1,22 @@
 #include<stdio.h>
 
+#define insertion_sort(array) insertion_sort_with_size(array, sizeof(array)/sizeof(array[0]))
+void insertion_sort_with_size(int array[], int size)
+{
+    for (int i = 1; i < size; i++) 
+    {
+        int value = array[i];
+        int j = i;
+        while (j > 0 && array[j - 1] > value) 
+        {
+            array[j] = array[j - 1];
+            j--;
+        }
+
+        array[j] = value;
+    }
+}
+
 #define print_array(array) print_array_of_size(array, sizeof(array)/sizeof(array[0]))
 void print_array_of_size(int array[], int size){
     for (int i = 0; i < size; i++)
@@ -7,23 +24,6 @@ void print_array_of_size(int array[], int size){
         printf("%d, ", array[i]);
     }
     printf("\n");
-}
-
-
-#define insertion_sort(array) insertion_sort_with_size(array, sizeof(array)/sizeof(array[0]))
-void insertion_sort_with_size(int array[], int size)
-{
-	for (int i = 1; i < size; i++) 
-	{
-        int value = array[i];
-		int j = i;
-		while (j > 0 && array[j - 1] > value) 
-		{
-			array[j] = array[j - 1];
-			j--;
-		}
-		array[j] = value;
-	}
 }
 
 int main()
@@ -36,3 +36,4 @@ int main()
 
     return 0;
 }
+
