@@ -1,0 +1,5 @@
+Simple sorting algorythms
+
+Insertion Sort
+    complexity: O(n^2)
+    Suitable for sorting data while its being collected.
