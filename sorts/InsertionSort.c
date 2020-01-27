@@ -4,9 +4,9 @@
 void print_array_of_size(int array[], int size){
     for (int i = 0; i < size; i++)
     {
-        printf("%i, ", array[i]);
+        printf("%d, ", array[i]);
     }
-    printf("\b\b\n");
+    printf("\n");
 }
 
 
@@ -28,8 +28,11 @@ void insertion_sort_with_size(int array[], int size)
 
 int main()
 {
-    int array[] = {1, -1, 50, 33, 0};
+    int array[] = {1, -1, 50, 49, 0, 3, 5, 8, 4, 1, 9, -2};
+
     print_array(array);
     insertion_sort(array);
     print_array(array);
+
+    return 0;
 }
