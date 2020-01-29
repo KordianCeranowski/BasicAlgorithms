@@ -1,10 +1,13 @@
 Simple sorting algorythms
 
 Insertion Sort
-    complexity: O(n^2)
+    Complexity: O(n^2)
     Suitable for sorting data while its being collected.
     Faster than Selection Sort
 Selection Sort
-    complexity: O(n^2)
+    Complexity: O(n^2)
     Good for sorting on external devices which have significantly longer write operation, since it makes maximum of n swaps.
     Faster than Bubble Sort
+Bubble Sort
+    complexity: O(n^2)
+    Useless
